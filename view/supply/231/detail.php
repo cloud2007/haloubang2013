@@ -5,30 +5,26 @@
 <!-----------------------------楼盘信息----------------------------------->
 <div id="position_title">我的位置:<?php echo $postion;?> </div>
 
-<div id="hz" style="width:980px; margin:0 auto;" class="imgdis">
-       <div class="hzcon"><img src="/view/supply/231/img/images/hm_01.jpg" width="981" height="74"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_02.jpg" width="981" height="100"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_03.jpg" width="981" height="92"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_04.jpg" width="981" height="112"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_05.jpg" width="981" height="150"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_06.jpg" width="981" height="109"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_07.jpg" width="981" height="119"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_08.jpg" width="981" height="95"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_09.jpg" width="981" height="114"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_10.jpg" width="981" height="108"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_11.jpg" width="981" height="132"></div>
-   <div class="hzcon"><img src="/view/supply/231/img/images/hm_12.jpg" width="981" height="125"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_13.jpg" width="981" height="142"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_14.jpg" width="981" height="123"></div>
-   <div class="hzcon"><img src="/view/supply/231/img/images/hm_15.jpg" width="981" height="146"></div>
-   <div class="hzcon"><img src="/view/supply/231/img/images/hm_16.jpg" width="981" height="141"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_17.jpg" width="981" height="156"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_18.jpg" width="981" height="155"></div>
-     <div class="hzcon"><img src="/view/supply/231/img/images/hm_19.jpg" width="981" height="165"></div>
-   <div class="hzcon"><img src="/view/supply/231/img/images/hm_20.jpg" width="981" height="128"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_21.jpg" width="981" height="140"></div>
-  <div class="hzcon"><img src="/view/supply/231/img/images/hm_22.jpg" width="981" height="99"></div>
- </div>
+<div id="cy" style="width:981px; margin:0 auto;" class="imgdis">
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_01.jpg" width="981" height="143"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_02.jpg" width="981" height="135"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_03.jpg" width="981" height="127"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_04.jpg" width="981" height="102"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_05.jpg" width="981" height="162"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_06.jpg" width="981" height="172"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_07.jpg" width="981" height="170"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_08.jpg" width="981" height="163"></div> 
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_09.jpg" width="981" height="245"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_10.jpg" width="981" height="196"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_11.jpg" width="981" height="200"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_12.jpg" width="981" height="214"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_13.jpg" width="981" height="163"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_14.jpg" width="981" height="252"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_15.jpg" width="981" height="278"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_16.jpg" width="981" height="244"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_17.jpg" width="981" height="245"></div>
+     <div class="cy1"><img src="/view/supply/231/img/images/cy_18.jpg" width="981" height="176"></div>
+</div>
 
 
 

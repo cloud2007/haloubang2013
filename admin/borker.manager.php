@@ -33,6 +33,8 @@ if($_GET['action']=='reset'){
 //启用账户
 if($_GET['action']=='del'){
     $borker ->delete($_GET['id']);
+    $house = new House();
+    $house ->deletes('borker_id = '.$_GET['id']);
     ShowMsg('账户已删除！','borker.manager.php',0,1000);exit();
 }
 
