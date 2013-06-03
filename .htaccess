@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule ^index\.html$ index.php [L]
+
+RewriteRule ^rent/d-(.*?)\.html$ rent/details.php?id=$1 [L]
+RewriteRule ^sale/d-(.*?)\.html$ sale/details.php?id=$1 [L]
+RewriteRule ^broker/d-(.*?)\.html$ broker/details.php?id=$1 [L]
+RewriteRule ^borough/d-(.*?)\.html$ borough/details.php?id=$1 [L]
+RewriteRule ^photo/d-(.*?)\.html$ photo/details.php?id=$1 [L]
+RewriteRule ^photo/h-(.*?)\.html$ photo/house.php?id=$1 [L]
+
+RewriteRule ^news/list-(.*?)\.html$ news/list.php?bid=$1 [L]
+RewriteRule ^news/d-(.*?)\.html$ news/details.php?id=$1 [L]
+RewriteRule ^supply/d-(.*?)\.html$ supply/details.php?id=$1 [L]
