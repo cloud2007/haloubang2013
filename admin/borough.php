@@ -34,7 +34,7 @@ if($_GET['action']=='save'){
 		'b_used' => 'b_used',
 		'b_avatar' => 'b_avatar',
 		'b_company' => 'b_company',
-		'b_content' => 'b_content',
+		//'b_content' => 'b_content',
 		'b_rentprice1' => 'b_rentprice1',
 		'b_rentprice2' => 'b_rentprice2',
 		'b_saletprice1' => 'b_saletprice1',
@@ -54,6 +54,7 @@ if($_GET['action']=='save'){
         $Borough -> b_creattime = $_POST['id'] ? $_POST['b_creattime'] : time();
 	$Borough -> b_opentime = $_POST['b_opentime'] ? strtotime($_POST['b_opentime']) : NULL;//开盘时间
         $Borough -> b_begintime = $_POST['b_begintime'] ? strtotime($_POST['b_begintime']) : NULL;//开盘时间
+        $Borough->b_content = stripslashes($_POST['b_content']);
 	$Borough -> b_edittime = time();
         $Borough -> b_complete = $check ->complete();
 	foreach($savecolumns as $k){

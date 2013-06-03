@@ -46,6 +46,11 @@
 				<p class="addren"><a href="/supply/d-211.html">地址：中国.成都.东大街芝泉路68号</a></p>
 				<p class="add">【甲级写字楼】</p>
 			</li>
+             <li> <a href="/supply/d-241.html"><img src="/view/supply/241/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-241.html">成都华敏翰尊国际大厦</a></p>
+				<p class="addren"><a href="/supply/d-241.html">地址：中国.成都.锦江区福兴路1号</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
 			
 		</ul>
 	</div>

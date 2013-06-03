@@ -43,11 +43,12 @@ if ($_POST['action'] == 'save') {
         'pic_hxt' => 'pic_hxt',
         'pic_pmt' => 'pic_pmt',
         'states' => 'states',
-        'content' => 'content',
+        //'content' => 'content',
     );
     if($_POST['id'])$House -> id = $_POST['id'];
     if($_POST['id'])$House ->edittime = time();
     if(!$_POST['id'])$House ->creattime = time();
+    $House ->content = stripslashes($_POST['content']);
     foreach($savecolumns as $k){
         $House -> $k = $_POST[$k];
     }

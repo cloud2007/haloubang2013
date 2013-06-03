@@ -28,7 +28,7 @@
 							<li> <span class="c_1 <?php if($k <3) echo 'c_2';?>"><?php echo $k+1;?></span>
 								<dl>
 									<dt <?php if($k == 0) echo 'style="display:none"';?>><a href="/borough/d-<?php echo $v->id;?>.html"><?php echo $v->b_name;?></a><span>[<?php echo Config::item('borough_area.'.$v->b_area1);?>]</span></dt>
-									<dd <?php if($k != 0) echo 'style="display:none"';?>><a href="/borough/d-<?php echo $v->id;?>.html"><img src="<?php echo Util::getpicthumb($v -> getdefaultpic(),'thumb') ;?>" width="79" height="64" alt=""></a>
+									<dd <?php if($k != 0) echo 'style="display:none"';?>><a href="/borough/d-<?php echo $v->id;?>.html"><img src="<?php echo Util::getpicthumb($v -> getdefaultpic(),'small') ;?>" width="79" height="64" alt=""></a>
 										<p><a href="/borough/d-<?php echo $v->id;?>.html" class="gray"><?php echo $v->b_name;?></a></p>
 										<p><a href="/borough/d-<?php echo $v->id;?>.html"><?php echo Config::item('borough_area.'.$v->b_area1);?>-<?php echo Config::item('area_'.$v->b_area1.'.'.$v->b_area2);?></a></p>
 										<p><a href="/borough/d-<?php echo $v->id;?>.html"  class="red"><?php echo $v->b_rentprice1.'-'.$v->b_rentprice2;?>元/平米•月</a></p>

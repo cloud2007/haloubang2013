@@ -4,7 +4,7 @@ $view = new View('photo/index');
 
 $borough = new Borough();
 $pager = new Pager();
-$pagesize = 10;
+$pagesize = 12;
 //检测是否传入当前页数----------------------
 if(isset($_GET['PageNo'])&&is_numeric($_GET['PageNo'])){
     $currentpage=$_GET['PageNo'];

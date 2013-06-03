@@ -27,7 +27,7 @@
                                     <font style="font-size:12px; color:#888; font-weight:200; text-decoration:none;"><?php echo Config::item('house.paystyle.'.$v->paystyle);?> 总租金：<?php echo $v->price*$v->area;?>元/月</font>
                                      </div>
                                      
-									<div class="img5"><a href="/rent/d-<?php echo $v->id;?>.html" target="_blank"><img src="<?php echo Util::getpicthumb($v->getdefaultpic(),'thumb');?>" width="107" height="71" alt=""></a></div>
+									<div class="img5"><a href="/rent/d-<?php echo $v->id;?>.html" target="_blank"><img src="<?php echo Util::getpicthumb($v->getdefaultpic(),'small');?>" width="107" height="71" alt=""></a></div>
                                     
 									<div class="p_con"> <a href="/rent/d-<?php echo $v->id;?>.html" target="_blank"><?php echo $v->b_name;?></a>
 										<p> 
@@ -58,7 +58,7 @@
 						<font style="font-size:12px;  color:#888; font-weight:200; text-decoration:none;">单价：<?php echo $v->price;?>元/平米</font>
                                      </div>
                                      
-									<div class="img5"><a href="/sale/d-<?php echo $v->id;?>.html" target="_blank"><img src="<?php echo Util::getpicthumb($v->getdefaultpic(),'thumb');?>" width="107" height="71" alt=""></a></div>
+									<div class="img5"><a href="/sale/d-<?php echo $v->id;?>.html" target="_blank"><img src="<?php echo Util::getpicthumb($v->getdefaultpic(),'small');?>" width="107" height="71" alt=""></a></div>
                                     
 									<div class="p_con"> <a href="/sale/d-<?php echo $v->id;?>.html" target="_blank"><?php echo $v->b_name;?></a>
 										<p> 

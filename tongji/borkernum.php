@@ -7,7 +7,6 @@ $arr = $house -> groupBy(
 	array('Count' => 'id')
 	//array('order' => array('Count' => 'desc')) //如果要按Count结果排序，字段名就写Count
 );
-print_r($arr);
 $str="";
 $str.="<chart formatNumberScale='0' palette='4' bgColor='666666' showShadow='0' bgAlpha='0' baseFontSize='12' baseFontColor='000000' bgAngle='360' showBorder='1' toolTipSepChar='套数:'>";
 foreach($arr as $v){
