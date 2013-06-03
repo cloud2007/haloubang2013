@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{margin:0;padding:0}
+body{background:#fff;font-size:12px;color:#333;line-height:20px;text-align:left;}
+ul,li,ol{ list-style:none;}
+img{border:none;}
+a{color:#0044CC;text-decoration:none;}
+a:hover{color:#f30;text-decoration:underline;}
+.floatl{float:left;}
+.floatr{float:right;}
+.maskleft,.maskright{height:35px;background:url(../img/map/mask_bk.gif) no-repeat;color:#fff;white-space:nowrap;}
+.maskleft{padding:0px 3px 0px 8px;font:12px/23px Arial;vertical-align:text-top;}
+.maskright{width:5px;background-position:100% -40px;}
+.mt10{margin-top:10px;}
+.mt4{margin-top:4px;}
+.mt5{margin-top:5px;}
+.mlr5{margin:5px 5px 0;}
+.mlr10{margin:0 10px;}
+.mr10{margin-right:10px;}
+.ml-8{margin-left:-8px;}
+.mr20{margin-right:20px;}
+.mr40{margin-right:40px;}
+.padl30{padding-left:30px;}
+.padl27{padding-left:25px;}
+.mb10{margin-bottom:10px;}
+.floatl{float:left;}
+.floatr{float:right;}
+.clear{clear:both;}
+.alignc{text-align:center;}
+.alignr{text-align:right;}
+.borderb{border-bottom:1px solid #DAE6F2;}
+.traffic p{line-height:26px;font-size:12px;padding:0 10px;}
+.traffic .search{margin:10px;width:690px;border:1px solid #ddd;}
+.traffic .search .checkbox{width:110px;padding:10px 10px 0;height:340px;}
+.traffic .search .checkbox li{width:110px;float:left;line-height:26px;height:26px;}
+.traffic .search .search_input{float:left;width:670px;border-top:1px solid #ddd;background:#f5f5f5;padding:10px;}
+.traffic .search .search_input span{float:left;}
+.traffic .search .search_input .inp2{float:left;width:2px;height:22px;background:url(../img/map/searchbj.gif) no-repeat right 0px;position:absolute;top:0px;right:-1px!important;right:-2px;}
+.traffic .search .search_input .inp1{float:left;height:22px;position:relative;}
+.traffic .search .search_input .inp1 input{float:left;height:22px;line-height:22px;width:200px;padding-left:7px;overflow:hidden;background:url(../img/map/searchbj.gif) repeat-x 0px 0px;font-size:12px;color:#888;border:0px;}
+.traffic .search .search_input .button{width:70px;height:22px;line-height:22px;border:0px;cursor:pointer;background:url(../img/map/searchbj.gif) no-repeat 0 -24px;margin-left:5px;}

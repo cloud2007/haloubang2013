@@ -1,0 +1,87 @@
+@charset "utf-8";
+BODY {
+	TEXT-ALIGN: center; FONT-FAMILY: "宋体"; BACKGROUND: #ffffff; FONT-SIZE: 12px
+}
+
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	TEXT-ALIGN: left;
+}
+
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; VERTICAL-ALIGN: top; BORDER-LEFT-WIDTH: 0px
+}
+
+
+
+.picshow {
+	  WIDTH: 416px;   height:345px;
+}
+
+#picarea {
+	 WIDTH: 416px; BACKGROUND: #fff; HEIGHT: 340px; 
+}
+#bigpicarea {
+	POSITION: relative; WIDTH: 415px; HEIGHT: 288px; OVERFLOW: hidden
+}
+.image {
+	TEXT-ALIGN: center
+}
+.image IMG {
+	BORDER-BOTTOM: #ececec 1px solid; BORDER-LEFT: #ececec 1px solid; BORDER-TOP: #ececec 1px solid; BORDER-RIGHT: #ececec 1px solid
+}
+#bigpicarea .word {
+	TEXT-ALIGN: center; HEIGHT: 50px; COLOR: #333
+}
+#bigpicarea .word H3 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 48px; HEIGHT: 48px; COLOR: #333; FONT-SIZE: 14px
+}
+#bigpicarea .ui-els-hide {
+	DISPLAY: none
+}
+#thumbs {
+	LIST-STYLE-TYPE: none;  WIDTH: 415px; HEIGHT: 45px; margin-top:5px;
+}
+* HTML #thumbs {
+	HEIGHT: 100%
+}
+#thumbs LI {
+	 DISPLAY: inline; FLOAT: left; 
+}
+
+#thumbs LI.last_img {
+	MARGIN-RIGHT: 4px
+}
+#thumbs LI.first {
+	MARGIN: 25px 10px 0px 15px; WIDTH: 9px; HEIGHT: 16px; CURSOR: pointer; border:1px solid #006;;
+}
+#thumbs LI.last {
+	MARGIN: 25px 10px 0px 15px; WIDTH: 9px; HEIGHT: 16px; CURSOR: pointer
+}
+
+
+.bigbtnPrev {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 35px; HEIGHT: 51px; TOP: 120px; CURSOR: pointer; LEFT:5px
+}
+.bigbtnNext {
+	Z-INDEX: 100; POSITION: absolute; WIDTH: 35px; HEIGHT: 51px; TOP: 120px; CURSOR: pointer; RIGHT: 5px
+}
+#big_play_prev {
+	BACKGROUND-IMAGE: url(../img/leftbig.png); WIDTH: 35px; DISPLAY: block; HEIGHT: 51px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../images/leftbig.png')
+}
+#big_play_next {
+	BACKGROUND-IMAGE: url(../img/rightbig.png); WIDTH: 35px; DISPLAY: block; HEIGHT: 51px; _background: none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='../images/rightbig.png')
+}
+#smallpicarea {
+	  BORDER-TOP: #ececec 1px solid;}
+#thumbs ul li a{ display:block; width:80px; height:40px; line-height:40px; 
+margin-right:5px; text-align:center; color:#535353; text-decoration:none; }
+#thumbs li a.current{  color:#000000;}
