@@ -14,6 +14,17 @@ if ($_POST['action'] == 'save') {
     if (!$_POST['b_id']) {
         ShowMsg('填写不完整！', '-1', 0, 1000);
         exit();
+    }else{
+        $che = new House();
+        $res = $che ->find(
+                array(
+                    'whereAnd'=>array(array('b_id','='.$_POST['b_id']),array('h_floor','='.$_POST['h_floor']),array('roomnum','='.$_POST['roomnum'])),
+                )
+        );
+        if($res && !$_POST['id']){
+                ShowMsg('房源已存在，请勿重复添加！', '-1', 0, 1000);
+                exit();
+        }
     }
     $savecolumns = array(
         'type' => 'type',

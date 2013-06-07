@@ -65,6 +65,16 @@ $newhouse = $house ->find(
 );
 $view ->set('newhouse',$newhouse);
 
+//新盘列表（时间排序）
+$newborough = $borough -> find(
+    array(
+        'whereAnd'=>array(array('b_isnew','=1')),
+        'limit'=>'0,4',
+        'order'=>array('b_creattime'=>'desc'),
+    )
+);
+$view ->set('newborough',$newborough);
+
 //友情链接
 $link = new Link();
 $linklist = $link -> getlist();

@@ -3,6 +3,7 @@
 
 <div class="content">
 	<div id="position_title">我的位置：<?php echo $postion;?></div>
+		<div class="ad_for_top_1"></div>
 	<!-----------------------------楼盘列表----------------------------------->
 	<div id="search_list">
 		<div class="hight_search_l">
@@ -77,7 +78,7 @@
 			<div class="list_cent">
 				<ul>
 					<?php foreach($datalist as $v){?>
-					<li>
+					<li class="list_cent_li">
 						<div class="fang" onclick="window.open('/sale/d-<?php echo $v->id;?>.html')">
 						<a href="/sale/d-<?php echo $v->id;?>.html" target="_blank"><img class="pro_img" src="<?php echo Util::getpicthumb($v->getdefaultpic($v->b_id),'middle');?>" width="125" height="85" alt=""></a>
 						<p class="fangli"><a href="/sale/d-<?php echo $v->id;?>.html" style="font-size:16px;" class="red" target="_blank"><?php echo $v->b_name;?></a></p>
@@ -86,7 +87,8 @@
 						<font style="font-size:12px;  color:#888; font-weight:200; text-decoration:none;">单价：<?php echo $v->price;?>元/平米</font> </span>
 						<p class="fangcon"> 楼层：<font style="font-size:12px; font-weight:bold; color:#0000DD"><?php echo $v->h_floor;?>F</font> &nbsp;  &nbsp;房号：<font style="font-size:12px; font-weight:bold; color:#0000DD"><?php echo $v->roomnum;?>号</font> <br />
 							面积：<font style="font-size:12px; font-weight:bold; color:#0000DD"><?php echo $v->area;?>平米</font> <br />
-							地址： <?php echo $v->b_addr;?></p>
+							地址： <?php echo $v->b_addr;?><br />
+                            <font color="#999999">发布时间:<?php echo $v->editTime();?> </font></p>
 						<div class="list_house_right_box">
 							<ul>
 								<?php if($v->get('qt1'))echo '<li class="exemption">'.$hs[$v->get('qt1')].'</li>';?>

@@ -17,7 +17,9 @@
 					</ul>
 					<ul class="slide-li slide-txt">
 						<?php foreach($piclist as $key => $value){?>
-						<li <?php if($key==3){echo 'class="one"';}?> <?php if($key==0){echo 'class="cur"';}?> ><a href="<?php echo $value->pic_thumb;?>" target="_blank"><?php if(Config::item('borough_pictype.'.$value->pic_sub_cate))echo Config::item('borough_pictype.'.$value->pic_sub_cate); else echo "房源图片";?></a></li>
+						<li <?php if($key==3){echo 'class="one"';}?> <?php if($key==0){echo 'class="cur"';}?> ><a href="<?php echo $value->pic_thumb;?>" target="_blank">
+							<?php if(Config::item('borough_pictype.'.$value->pic_sub_cate))echo Config::item('borough_pictype.'.$value->pic_sub_cate); else echo "房源图片";?>
+							</a></li>
 						<?php }?>
 					</ul>
 				</div>
@@ -30,32 +32,23 @@
 				<li class="houses_r_li"><span class="f"><span class="f1">租金：</span><span class="r"><?php echo $borough->b_rentprice1.'-'.$borough->b_rentprice2;?></span> 元/平米•月 </span> <span> <span class="f1">客梯：</span><?php echo $borough->get('keti');?> 部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f1">货梯：</span><?php echo $borough->get('huoti');?>部</span></li>
 				<li class="houses_r_li"><span class="f"><span class="f1">总楼层：</span><span class="r"><?php echo $borough->get('zonglouceng');?></span>层</span> <span><span class="f1">标准层高：</span><?php echo $borough->get('cenggao');?>平米</li>
 				<li class="houses_r_li"><span class="f"><span class="f1">单层面积：</span><span class="r"><?php echo $borough->get('cengmianji');?></span>平米</span> <span><span class="f1">空调：</span><?php echo $borough->get('kongtiaoxitong');?></span></li>
-				<li class="houses_r_li"><span class="f"><span class="f1">物业：</span><span class="r"><?php echo $borough->get('wuyegongsi');?></span></span> <span><span class="f1">物管费：</span><?php echo $borough->get('wuyefei');?>元/平米</span></li>
+				<li class="houses_r_li"><span class="f"><span class="f1">物业：</span><span ><?php echo $borough->get('wuyegongsi');?></span></span> <span><span class="f1">物管费：</span><?php echo $borough->get('wuyefei');?>元/平米</span></li>
 				<li class="houses_r_li"><span class="f"><span class="f1">开发商：</span> </span> <span><span class="f1">停车位：</span>地上<?php echo $borough->get('chewei1');?>个 &nbsp; /地下<?php echo $borough->get('chewei2');?>个</span></li>
 				<li class="houses_r_li"><span class="f"><span class="f1">地址：</span><?php echo $borough->b_addr;?></span></li>
 			</ul>
-            
-            	<p class="hp1">打电话请告诉经纪人,您是从<span>好楼帮</span>上看见的</p>
+			<p class="hp1">打电话请告诉经纪人,您是从<span>好楼帮</span>上看见的</p>
 			<p class="p_t"><span class="ep">二手均价：</span> <span class="r">￥<?php echo $borough->b_saletprice1;?>-<?php echo $borough->b_saletprice2;?>元/平米</span> <span class="sa"><span class="or"><?php echo $borough->gethousenum(2);?></span>套在售</span> &nbsp;&nbsp;&nbsp;<span class="ep">租赁均价：</span> <span class="r">￥<?php echo $borough->b_rentprice1;?>-<?php echo $borough->b_rentprice2;?>元/平米•月</span> <span class="sa"><span class="or"><?php echo $borough->gethousenum(1);?></span>套在租</span> </p>
-			<div class="phone_num img_1"><span class="phone_num_main">028-68611333</span><!--font style="font-size:24px; color:#001645; font-weight:blod;">转</font></span> <span class="phone_num_less">1006</span--> </div>
-             <!-- Baidu Button BEGIN -->
-<div id="bdshare_0" class="bdshare_t bds_tools get-codes-bdshare">
-<span class="bds_more">分享到：</span>
-<a class="bds_qzone"></a>
-<a class="bds_tsina"></a>
-<a class="bds_tqq"></a>
-<a class="bds_renren"></a>
-<a class="bds_t163"></a>
-<a class="shareCount"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6718782" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
+			<div class="phone_num img_1"><span class="phone_num_main">028-61326632</span>
+				<!--font style="font-size:24px; color:#001645; font-weight:blod;">转</font></span> <span class="phone_num_less">1006</span-->
+			</div>
+			<!-- Baidu Button BEGIN -->
+			<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare bdshare_0"> <span class="bds_more">分享到：</span> <a class="bds_qzone"></a> <a class="bds_tsina"></a> <a class="bds_tqq"></a> <a class="bds_renren"></a> <a class="bds_t163"></a> <a class="shareCount"></a> </div>
+			<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6718782" ></script>
+			<script type="text/javascript" id="bdshell_js"></script>
+			<script type="text/javascript">
 document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
 </script>
-<!-- Baidu Button END -->
-
-
+			<!-- Baidu Button END -->
 			<!--p class="pe">联系经纪人：<a href="/"><span class="b">李欣帽</span></a></p-->
 		</div>
 	</div>
@@ -68,7 +61,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 					<ul class="h_ul hover_1">
 						<li><span class="lh">楼层房号</span><span class="mj">面积</span><span class="jg">价格</span><span class="fb">发布时间</span></li>
 						<?php foreach($renthouse as $v){?>
-						<li><span class="a1"><?php echo $v->h_floor;?>F  <?php echo $v->roomnum;?>号 </span><span class="a2"><?php echo $v->area;?>平米 </span><span class="a3"><?php echo $v->price;?>元/平米•月</span><span class="a4"><?php echo $v->creattime();?></span><a href="/rent/d-<?php echo $v->id;?>.html" target="_blank" class="a5"> 查看详情</a></li>
+						<li><span class="a1"><?php echo $v->h_floor;?>F <?php echo $v->roomnum;?>号 </span><span class="a2"><?php echo $v->area;?>平米 </span><span class="a3"><?php echo $v->price;?>元/平米•月</span><span class="a4"><?php echo $v->creattime();?></span><a href="/rent/d-<?php echo $v->id;?>.html" target="_blank" class="a5"> 查看详情</a></li>
 						<?php }?>
 					</ul>
 					<a href="/rent/?b_id=<?php echo $borough->id;?>" target="_blank" style="display:block; height:30px; float:right; line-height:30px; padding-right:20px; font-weight:bold; color:#0036fe;">点击 展开更多></a> </div>
@@ -81,11 +74,10 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 					<ul class="h_ul hover_2">
 						<li><span class="lh">楼层房号</span><span class="mj">面积</span><span class="jg">价格</span><span class="fb">发布时间</span></li>
 						<?php foreach($salehouse as $v){?>
-						<li><span class="a1"><?php echo $v->h_floor;?>F  <?php echo $v->roomnum;?>号 </span><span class="a2"><?php echo $v->area;?>平米 </span><span class="a3"><?php echo $v->price;?>元/平米</span><span class="a4"><?php echo $v->creattime();?></span><a href="/sale/d-<?php echo $v->id;?>.html" target="_blank" class="a5"> 查看详情</a></li>
+						<li><span class="a1"><?php echo $v->h_floor;?>F <?php echo $v->roomnum;?>号 </span><span class="a2"><?php echo $v->area;?>平米 </span><span class="a3"><?php echo $v->price;?>元/平米</span><span class="a4"><?php echo $v->creattime();?></span><a href="/sale/d-<?php echo $v->id;?>.html" target="_blank" class="a5"> 查看详情</a></li>
 						<?php }?>
 					</ul>
-					<a href="/sale/?b_id=<?php echo $borough->id;?>" target="_blank" style="display:block; height:30px; float:right; line-height:30px; padding-right:20px; font-weight:bold; color:#0036fe;">点击 展开更多></a>
-				</div>
+					<a href="/sale/?b_id=<?php echo $borough->id;?>" target="_blank" style="display:block; height:30px; float:right; line-height:30px; padding-right:20px; font-weight:bold; color:#0036fe;">点击 展开更多></a> </div>
 				<div class="h_b"></div>
 			</div>
 			<div id="parameter">
@@ -148,12 +140,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 								<?php foreach($hotrentborough as $k=>$v){?>
 								<li>
 									<dl>
-										<dt <?php if($k == 0) echo 'style="display:none"';?>><a style="float:left;" href="/borough/d-<?php echo $v->id;?>.html"><?php echo $v->b_name;?></a>  <a style="float:right; color:#00F" href="/borough/d-<?php echo $v->id;?>.html"></a>
-                                        
-                                        <span>【<?php echo Config::item('borough_area.'.$v->b_area1);?>】</span>
-                                        
-                                        
-                                        </dt>
+										<dt <?php if($k == 0) echo 'style="display:none"';?>><a style="float:left;" href="/borough/d-<?php echo $v->id;?>.html"><?php echo $v->b_name;?></a> <a style="float:right; color:#00F" href="/borough/d-<?php echo $v->id;?>.html"></a> <span>【<?php echo Config::item('borough_area.'.$v->b_area1);?>】</span> </dt>
 										<dd <?php if($k != 0) echo 'style="display:none"';?>><a href="/borough/d-<?php echo $v->id;?>.html"><img src="<?php echo Util::getpicthumb($v -> getdefaultpic(),'small') ;?>" width="79" height="64" alt=""></a>
 											<p><a href="/borough/d-<?php echo $v->id;?>.html" class="gray"><?php echo $v->b_name;?></a></p>
 											<p><a href="/borough/d-<?php echo $v->id;?>.html"><?php echo Config::item('borough_area.'.$v->b_area1);?>-<?php echo Config::item('area_'.$v->b_area1.'.'.$v->b_area2);?></a></p>
@@ -226,7 +213,9 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	<div class="map_a Real_photo">
 		<div class="map_title">
 			<p><?php echo $borough->b_name;?></p>
-			<span>楼盘相册</span><!--a href="#">楼盘照片（21）</a><a href="#">周边照片（8）</a><a href="#">平面图（21）</a--></div>
+			<span><a href="/photo/details.php?id=<?php echo $v->id;?>">楼盘相册</a></span>
+			<!--a href="#">楼盘照片（21）</a><a href="#">周边照片（8）</a><a href="#">平面图（21）</a-->
+		</div>
 		<div class="r_p">
 			<ul>
 				<?php foreach($allpic as $v){?>
@@ -239,7 +228,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	<!---------------------------经纪人信息----------------------------------->
 	<div class="map_a Real_photo r">
 		<div class="map_title"></div>
-		<div class="phone_num phone_num_left"><span class="phone_num_main">028-68611333</span></div>
+		<div class="phone_num phone_num_left"><span class="phone_num_main">028-61326632</span></div>
 		<div class="phone_num_right_text">
 			<p class="two">对该楼盘房源感兴趣？  联系<a href="/borker">好楼帮</a>经纪人，给您提供更多方案</p>
 		</div>
@@ -249,7 +238,6 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	<!---------------------------你可能感兴趣----------------------------------->
 	<?php require_once( ROOTPATH . '/interestrent.php');?>
 </div>
-
 <script type="text/javascript" src="/js/jquery.lightbox-0.5.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
 <script type="text/javascript">
@@ -257,4 +245,4 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
         $('.r_p a').lightBox();
 		$('.cur a').lightBox();
     });
-    </script>
+</script>

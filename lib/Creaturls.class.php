@@ -42,6 +42,7 @@ class Creaturls {
 				'2' => '单价',//降序
 				'3' => '时间',
 			),
+                        'tags' => Config::item('newborough.tags'),
 		);
 		$this -> filter = $filter;
 	}

@@ -6,6 +6,7 @@ RewriteRule ^rent/d-(.*?)\.html$ rent/details.php?id=$1 [L]
 RewriteRule ^sale/d-(.*?)\.html$ sale/details.php?id=$1 [L]
 RewriteRule ^broker/d-(.*?)\.html$ broker/details.php?id=$1 [L]
 RewriteRule ^borough/d-(.*?)\.html$ borough/details.php?id=$1 [L]
+RewriteRule ^newborough/d-(.*?)\.html$ newborough/details.php?id=$1 [L]
 RewriteRule ^photo/d-(.*?)\.html$ photo/details.php?id=$1 [L]
 RewriteRule ^photo/h-(.*?)\.html$ photo/house.php?id=$1 [L]
 

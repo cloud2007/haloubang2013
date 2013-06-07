@@ -21,7 +21,7 @@ $view -> set('datainfo',$cfg);
 if($_GET['action']=='save'){
         $cfg -> id =1;
         foreach($_POST['cfg'] as $key => $value){
-            $cfg -> set ("{$key}","{$value}");
+            $cfg -> set ("{$key}",stripslashes($value));
 	}
         $cfg->edittime = time();
 	$cfg -> save();

@@ -51,28 +51,34 @@
 				<p class="addren"><a href="/supply/d-241.html">地址：中国.成都.锦江区福兴路1号</a></p>
 				<p class="add">【甲级写字楼】</p>
 			</li>
+             <li> <a href="/supply/d-281.html"><img src="/view/supply/281/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-281.html">百扬大厦</a></p>
+				<p class="addren"><a href="/supply/d-281.html">项目地址：锦江区东御街与人民南路交汇处（天府广场以南，人民南路以东）
+</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
 			
 		</ul>
 	</div>
 	<div class="addr" id="qingyangqu">
 		<div class="addr_bg"><span>青羊区</span></div>
-		<ul class="addr_ul">
-			<li> <a href="/supply/d-131.html"><img src="/view/supply/131/logo.jpg" width="223" height="165" alt=""></a>
-				<p class="gra"><a href="/supply/d-131.html">来福士</a></p>
-				<p class="addren"><a href="/supply/d-131.html">地址：成都市人民南路四段三号来福士广场(省体育馆对面)</a></p>
+		
+			
+			
+		
+	</div>
+	<div class="addr md5" id="jingniuqu" >
+		<div class="addr_bg"><span >金牛区</span></div>
+        <ul class="addr_ul">
+			<li> <a href="/supply/d-271.html"><img src="/view/supply/271/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-271.html">环球广场</a></p>
+				<p class="addren"><a href="/supply/d-271.html">地址：成都市金牛区一环路北一段(沙湾路路口)</a></p>
 				<p class="add">【甲级写字楼】</p>
 			</li>
-			<li> <a href="/supply/d-161.html"><img src="/view/supply/161/logo.jpg" width="223" height="165" alt=""></a>
-				<p class="gra"><a href="/supply/d-161.html">华宇蓉国府</a></p>
-				<p class="addren"><a href="/supply/d-161.html">地址：成都.人民南路四段12号(省体育旁)</a></p>
-				<p class="add">【甲级写字楼】</p>
-			</li>
+			
 			
 			
 		</ul>
-	</div>
-	<div class="addr md5" id="jingniuqu" >
-		<div class="addr_bg"><span class="md6">金牛区</span><span class="md7">暂时没有</span></div>
 	</div>
 	<div class="addr" id="wuhouqu">
 		<div class="addr_bg"><span class="md6">武侯区</span></div>
@@ -80,6 +86,16 @@
 			<li> <a href="/supply/d-182.html"><img src="/view/supply/182/logo.jpg" width="223" height="165" alt=""></a>
 				<p class="gra"><a href="/supply/d-182.html">成都平安财富中心</a></p>
 				<p class="addren"><a href="/supply/d-182.html">地址：成都市人民南路三段</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
+            <li> <a href="/supply/d-131.html"><img src="/view/supply/131/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-131.html">来福士</a></p>
+				<p class="addren"><a href="/supply/d-131.html">地址：成都市人民南路四段三号来福士广场(省体育馆对面)</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
+			<li> <a href="/supply/d-161.html"><img src="/view/supply/161/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-161.html">华宇蓉国府</a></p>
+				<p class="addren"><a href="/supply/d-161.html">地址：成都.人民南路四段12号(省体育旁)</a></p>
 				<p class="add">【甲级写字楼】</p>
 			</li>
        </ul>
@@ -108,6 +124,16 @@
             <li> <a href="/supply/d-231.html "><img src="/view/supply/231/logo.jpg" width="223" height="165" alt=""></a>
 				<p class="gra"><a href="/supply/d-231.html ">创意成都</a></p>
 				<p class="addren"><a href="/supply/d-231.html ">地址：成都[高新区 南延线] 三色路38号</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
+             <li> <a href="/supply/d-251.html "><img src="/view/supply/251/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-251.html ">中海国际中心</a></p>
+				<p class="addren"><a href="/supply/d-251.html ">地址：成都 高新区益州大道与交子大道交汇处</a></p>
+				<p class="add">【甲级写字楼】</p>
+			</li>
+             <li> <a href="/supply/d-261.html "><img src="/view/supply/261/logo.jpg" width="223" height="165" alt=""></a>
+				<p class="gra"><a href="/supply/d-251.html ">花样年.美年中心</a></p>
+				<p class="addren"><a href="/supply/d-251.html ">地址：成都 高新区天府大道</a></p>
 				<p class="add">【甲级写字楼】</p>
 			</li>
 			

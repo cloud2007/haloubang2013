@@ -17,6 +17,7 @@ class News extends Data {
 			'addname' => 'addname',
 			'pic' => 'pic',
 			'states' => 'states',
+                        'borough_id' => 'borough_id',
 			'creattime' => 'creattime',
 			'edittime' => 'edittime',
 			),

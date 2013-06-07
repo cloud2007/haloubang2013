@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" type="text/css" href="/public/css/base.css"/>
 <link rel="stylesheet" type="text/css" href="/css/web_name.css"/>
 <link rel="stylesheet" type="text/css" href="/css/lrtk.css"/>
@@ -43,9 +44,9 @@
 			<div class="nav_l" style="width:1001px;">
 				<ul>
 					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/">首　页</a></li>
-					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/rent">找出租 </a></li>
-					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/sale">找出售 </a></li>
-					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/borough">找楼盘 </a></li>
+					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/rent">租写字楼</a></li>
+					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/sale">买写字楼</a></li>
+					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/newborough">新　盘</a></li>
 					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/supply">开发商直供 </a></li>
 					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/borker"> 经纪人 </a></li>
 					<li style="width:125px; text-align:center"><a style="width:125px; text-align:center" href="/map"> 地图找房 </a></li>

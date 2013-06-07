@@ -229,13 +229,46 @@ $(".hot_rent").children(".md_ul").children("li").hover(function(){
 	var _this=$(this).index();
 	$(".list_cent ul li").children("div").css({"background":"#fefff3"})
 	$(".list_cent ul li").eq(_this).children("div").css({"background":"#ffe49a"})
-	})*/
+	})
 $(".list_cent ul li").children("div").hover(function(){
 	$(this).addClass("hover_div")
 	       
 	},function(){
 	$(this).removeClass("hover_div")	
 		})
+*/
+
+var list_click = $(".list_cent_li");
+$.each(list_click, function(){
+	$(this).hover(
+		function(){
+			$(this).addClass("hover_div");
+		},function(){
+			$(this).removeClass("hover_div");
+		});
+	var li_all_a = $(this).find("a");
+	$.each(li_all_a, function() {
+		$(this).bind("click", function(event){
+			event.stopPropagation();
+		});
+	});
+	$(this).click(function(){
+		var obj  = $(this).find("a:first");
+		var link = obj.attr("href");
+		redirect(link);
+	});
+});
+function redirect(url){
+	if (!/*@cc_on!@*/0) {
+		window.open(url,'_blank');        
+	} else {
+		var a = document.createElement('a');            
+		a.href = url;            
+		a.target = '_blank';            
+		document.body.appendChild(a);            
+		a.click();        
+	}
+}
 
 
 /*------------------------房源列表end----------------------------------*/
@@ -247,7 +280,7 @@ $(".list_cent ul li").children("div").hover(function(){
 	},function(){
 	$(this).removeClass("hover_div")	
 		})
-/*------------------------经纪人页面----------------------------------*/
+/*------------------------经纪人页面----------------------------------
 $(".agent_l .agent_content .agent_rent .md_rent").children("li").hover(function(){
 	$(this).addClass("md_hover")
 	       .siblings().removeClass("md_hover")

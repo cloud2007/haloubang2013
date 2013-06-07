@@ -16,7 +16,7 @@ if(isset($_GET['PageNo'])&&is_numeric($_GET['PageNo'])){
 $options = array();
 $whereand = array();
 $order = array();
-
+$whereand[]=array('b_isnew','=0');
 if($_GET['area1']) $whereand[]=array('b_area1','='.$_GET['area1']);
 if($_GET['level']) $whereand[]=array('b_level','='.$_GET['level']);
 if($_GET['metro']) $whereand[]=array('b_subway',"like '%".$_GET['metro']."%'");

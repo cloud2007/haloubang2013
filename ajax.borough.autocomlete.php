@@ -5,6 +5,7 @@ $q=$_GET['q'];
 $options=array();
 $whereand=array();
 $whereand[]=array('b_states','=1');
+$whereand[]=array('b_isnew','=0');
 $whereand[]=array('b_name',"like '%".$q."%' or b_letter like '%".$q."%'");
 $options['whereAnd']=$whereand;
 $Borough = new Borough();

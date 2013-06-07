@@ -13,7 +13,7 @@
 		<td height="26" background="images/newlinebg3.gif" align="center">楼盘管理</td>
 	</tr>
 </table>
-<form id="search" name="search" method="post" action="borough.php">
+<form id="search" name="search" method="post" action="borough.php?isnew=<?php echo $_GET['isnew']?>">
 <table width="98%" border="0" cellpadding="0" cellspacing="1" bgcolor="#ccd9b9" align="center" style="margin-top:8px">
 	<tr>
 		<td height="26" background="images/newlinebg3.gif" style="padding:0 0 0 10px;"> 起止时间：
@@ -28,7 +28,7 @@
 				<option value="<?php echo $key;?>" <?php if($datainfo->b_area1 == $key) echo "selected";?>><?php echo $value;?></option>
 				<?php }?>
 			</select>
-			<input type="text" name="q" onblur="if(this.value ==''||this.value == '请输入楼盘名称,楼盘地址'){this.value = '请输入楼盘名称,楼盘地址';this.style.color = '#999999';}" onfocus="if(this.value == '请输入楼盘名称,楼盘地址'){this.value = '';this.style.color = '#333333';}" value="请输入楼盘名称,楼盘地址" size="35" >
+			<input type="text" name="q" onblur="if(this.value ==''||this.value == '请输入楼盘名称'){this.value = '请输入楼盘名称';this.style.color = '#999999';}" onfocus="if(this.value == '请输入楼盘名称'){this.value = '';this.style.color = '#333333';}" value="请输入楼盘名称" size="35" >
 			&nbsp;
 			<input type="submit" name="dosubmit" value=" 查询 " class="button_style">
 		</td>
@@ -61,8 +61,8 @@
 		<td><?php echo $key->creatTime();?></td>
 		<td><?php echo $key->editTime();?></td>
 		<td><?php echo $key->b_states();?></td>
-		<td><?php echo $key->b_complete;?>%</td>
-		<td><a href="?action=add&id=<?php echo $key->id;?>">编辑</a> <a onclick="return confirm('真的要删除吗?')" href="?action=del&id=<?php echo $key->id;?>">删除</a></td>
+		<td><?php echo $key->b_complete_show();?><?php if ($key->b_isnew==0) echo '%';?></td>
+		<td><a href="?action=add&id=<?php echo $key->id;?>&isnew=<?php echo $key->b_isnew;?>">编辑</a> <a onclick="return confirm('真的要删除吗?')" href="?action=del&id=<?php echo $key->id;?>&isnew=<?php echo $key->b_isnew;?>">删除</a></td>
 	</tr>
 	<?php }?>
 </table>

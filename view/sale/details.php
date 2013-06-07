@@ -30,19 +30,28 @@
 				<div style=" text-align:center;  height:20px; line-height:20px;"><a href="/photo/h-<?php echo $house->id;?>.html" target="_blank">查看全部相册 </a>    </div>
 			</DIV>
 		</div>
-		<div class="houses_r h_information"> <span class="house_title">房源基本概况</span>
+		<div class="houses_r h_information"> <span class="house_title">房源基本概况<font color="#CCCCCC" style="font-size:12px; padding-left:10px; font-weight:100">最后发布时间：<?php echo $house->editTime();?></font></span>
 			<ul class="houses_des">
-				<li><span class="f"><span class="f1">楼盘：</span><span class="t"><a href="/borough/d-<?php echo $borough->id;?>.html"><?php echo $borough->b_name;?></a><font style="font-size:12px;">【<?php echo Config::item('area_'.$borough->b_area1.'.'.$borough->b_area2);?>】</font></span></span> <span class="f1">楼盘均价：</span><span ><?php echo $borough->b_saletprice1.'-'.$borough->b_saletprice2;?>元/平米</span> </li>
-				<li><span class="f"><span class="f1">单价：</span><span class="r"><?php echo $house->price;?></span> 元/平米 </span> <span class="f1">面积：</span><span class="r"><?php echo $house->area;?>平方米</span></li>
-				<li><span class="f"><span class="f1">楼层：</span><span class="r"><?php echo $house->h_floor;?>层</span>/<?php echo $borough->get('zonglouceng');?>层</span> <span class="f1">层高：</span><?php echo $borough->get('cenggao');?>米</li>
+				<li><span class="f"><span >楼盘：</span><span class="t"><a href="/borough/d-<?php echo $borough->id;?>.html"><?php echo $borough->b_name;?></a><font style="font-size:12px; display:none;">【<?php echo Config::item('area_'.$borough->b_area1.'.'.$borough->b_area2);?>】</font></span></span>  </li>
+				<li><span class="f"><span class="f1">单价：</span><span class="r"><?php echo $house->price;?></span> 元/平米 </span> <span class="f1">售价：</span><span class="r"><?php echo number_format($house -> area * $house -> price /10000 , 2) ;?>万元</span></li>
+				<li><span class="f"><span class="f1">楼层：</span><span class="r"><?php echo $house->h_floor;?>层</span>/<?php echo $borough->get('zonglouceng');?>层</span> 
+                <span class="f1">面积：</span><span class="r"><?php echo $house->area;?>平方米</span>
+                
+                </li>
 				
 			</ul>
 			<div class="phone_num img_1"><span class="phone_num_less"><?php echo $borker->get('tel');?></span> </div>
 			<img src="<?php echo $borker->avatar();?>" width="78" height="103" alt="" class="img_2"> <img src="../img/info_02.jpg" width="22" height="15" alt="" class="img_3"> <img src="../img/info_03.jpg" width="22" height="15" alt="" class="img_4">
 			<p class="hp">经纪人：<a href="/borker/details.php?id=<?php echo $borker->id?>"><?php echo $borker->uname;?></a></p>
+            <p class="hp2"> 
+            
+            <a href="/borker/details.php?id=<?php echo $borker->id?>">查看他/她的房源</a>
+            </p>
+            
+            
 			<p class="hp1">打电话请告诉经纪人,您是从<span>好楼帮</span>上看见的</p>
             <!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<div id="bdshare" class="bdshare bdshare_t bds_tools get-codes-bdshare">
 <span class="bds_more">分享到：</span>
 <a class="bds_qzone"></a>
 <a class="bds_tsina"></a>
@@ -59,7 +68,10 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 <!-- Baidu Button END -->
 
 <ul class="houses_des_0">
-<li><span class="f"> <span class="f1">客梯：</span><?php echo $borough->get('keti');?>部</span> <span><span class="f1">空调：</span><?php echo $borough->get('kongtiaoxitong');?></span></li>
+<li  ><span ><span>地址：</span><span style="color:#000" > <?php echo $borough->b_addr;?> 【<a href="#map_a" style="color:#00f;">地图</a>】 </span></span> </span></li>
+<li><span class="f"><span>楼盘均价：</span><span style="color:#000" ><?php echo $borough->b_saletprice1.'-'.$borough->b_saletprice2;?>元/平米</span></span>
+<span>楼盘类型：</span><span style="color:#000"><?php echo Config::item('borough_level.'.$borough->b_level);?></span>
+</li>
 </ul>
 		</div>
 	</div>
@@ -188,7 +200,7 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 	<div class="map_a Real_photo" id="Real_photo">
 		<div class="map_title">
 			<p><?php echo $borough->b_name;?></p>
-			<span>楼盘相册</span><!--a href="#">楼盘照片（21）</a><a href="#">周边照片（8）</a><a href="#">平面图（21）</a--></div>
+			<span><a href="/photo/details.php?id=<?php echo $v->id;?>">楼盘相册</a></span><!--a href="#">楼盘照片（21）</a><a href="#">周边照片（8）</a><a href="#">平面图（21）</a--></div>
 		<div class="r_p">
 			<ul>
 				<?php foreach($borough_pic as $v){?>

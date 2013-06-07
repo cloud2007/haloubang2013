@@ -15,7 +15,7 @@ switch ($itemid){
 </dl>
 <dl class='bitem'>
 	<dt onClick='showHide("items1_2")'><b>新闻系统</b></dt>
-	<dd style='display:none' class='sitem' id='items1_2'>
+	<dd style='display:block' class='sitem' id='items1_2'>
 		<ul class='sitemu'>
 			<li><a href='news.php?action=add' target='main'>添加新闻</a></li>
 			<li><a href='news.php' target='main'>管理新闻</a></li>
@@ -24,7 +24,7 @@ switch ($itemid){
 </dl>
 <dl class='bitem'>
 	<dt onClick='showHide("items1_3")'><b>友情链接管理</b></dt>
-	<dd style='display:none' class='sitem' id='items1_3'>
+	<dd style='display:block' class='sitem' id='items1_3'>
 		<ul class='sitemu'>
 			<li><a href='link.manager.php' target='main'>友情链接</a> </li>
 		</ul>
@@ -32,7 +32,7 @@ switch ($itemid){
 </dl>
 <dl class='bitem'>
 	<dt onClick='showHide("items1_4")'><b>新闻栏目广告</b></dt>
-	<dd style='display:none' class='sitem' id='items1_4'>
+	<dd style='display:block' class='sitem' id='items1_4'>
 		<ul class='sitemu'>
 			<li><a href='ads.manager.php' target='main'>广告管理</a> </li>
 		</ul>
@@ -56,7 +56,7 @@ switch ($itemid){
 </dl>
 <dl class='bitem'>
 	<dt onClick='showHide("items2_2")'><b>委托信息管理</b></dt>
-	<dd style='display:none' class='sitem' id='items2_2'>
+	<dd style='display:block' class='sitem' id='items2_2'>
 		<ul class='sitemu'>
 			<li>
 				<div class='items'>
@@ -75,13 +75,22 @@ switch ($itemid){
 	<dd style='display:block' class='sitem' id='items3_1'>
 		<ul class='sitemu'>
 			<li><a href='borough.php?action=add' target='main'>添加楼盘</a></li>
-			<li><a href='borough.php' target='main'>管理楼盘</a></li>
+			<li><a href='borough.php?isnew=0' target='main'>管理楼盘</a></li>
+		</ul>
+	</dd>
+</dl>
+<dl class='bitem'>
+	<dt onClick='showHide("items3_2")'><b>新盘管理</b></dt>
+	<dd style='display:block' class='sitem' id='items3_2'>
+		<ul class='sitemu'>
+			<li><a href='borough.php?action=add&isnew=1' target='main'>添加新盘</a></li>
+			<li><a href='borough.php?isnew=1' target='main'>管理新盘</a></li>
 		</ul>
 	</dd>
 </dl>
 <dl class="bitem">
-	<dt onClick='showHide("items3_2")'><b>楼盘参数管理</b></dt>
-	<dd style='display:none' class='sitem' id='items3_2'>
+	<dt onClick='showHide("items3_3")'><b>楼盘参数管理</b></dt>
+	<dd style='display:block' class='sitem' id='items3_3'>
 		<ul class='sitemu'>
 			<li><a href='borough.setconfig.php' target='main'>楼盘参数</a></li>
 			<li><a href='borough.setcache.php' target='main'>楼盘参数缓存更新</a></li>
@@ -103,7 +112,7 @@ switch ($itemid){
 </dl>
 <dl class='bitem'>
 	<dt onClick='showHide("items4_2")'><b>修改账户密码</b></dt>
-	<dd style='display:none' class='sitem' id='items4_2'>
+	<dd style='display:block' class='sitem' id='items4_2'>
 		<ul class='sitemu'>
 			<li><a href='user.editpwd.php' target='main'>修改密码</a></li>
 		</ul>

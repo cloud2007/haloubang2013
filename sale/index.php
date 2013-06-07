@@ -54,7 +54,7 @@ $orders = array (
 
 $House = new House();
 $pager = new Pager();
-$pagesize = 10;
+$pagesize = 25;
 //检测是否传入当前页数----------------------
 if(isset($_GET['PageNo'])&&is_numeric($_GET['PageNo'])){
     $currentpage=$_GET['PageNo'];

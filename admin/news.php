@@ -14,6 +14,7 @@ if ($_GET['action'] == 'save') {
         'addname' => 'addname',
         'pic' => 'pic',
         'states' => 'states',
+        'borough_id' => 'borough_id',
     );
     $news = new News();
     if ($_POST['id'])$news->id = $_POST['id'];
@@ -68,8 +69,9 @@ if ($_GET['action'] == 'add') {
 
     $options = array();
     $whereAnd = array();
+    if ($_POST['type'])$whereAnd[] = array('type','='.$_POST['type']);
     if ($_POST['q'] !== '请输入关键字' && $_POST['q'])
-        $whereAnd[] = array('title', "like '%" . $_POST['q'] . "%' or content like '%" . $_POST['q'] . "%'");
+        $whereAnd[] = array('title', "like '%" . $_POST['q'] . "%'");
     $options['limit'] = "{$PageNum},{$pagesize}";
     $options['whereAnd'] = $whereAnd;
     $datalist = $news->find($options);

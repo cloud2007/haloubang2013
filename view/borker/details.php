@@ -14,13 +14,13 @@
 			<div class="agent_content">
 				<div class="agent_rent">
 					<ul class="md_rent">
-						<li class="md_hover">出租房源</li>
-						<li>出售房源</li>
+						<li <?php if ($type==1) echo 'class="md_hover"';?>><a href="/borker/details.php?id=<?php echo $borker->id;?>&type=1">出租房源</a></li>
+						<li <?php if ($type==2) echo 'class="md_hover"';?>><a href="/borker/details.php?id=<?php echo $borker->id;?>&type=2">出售房源</a></li>
 					</ul>
 					<div class="content_con">
-						<div class="re">
+						<div class="re <?php if ($type==2) echo 'fn-hide';?>">
 							<ul>
-								<?php foreach($rent as $v){?>
+								<?php foreach($datalist as $v){?>
 								<li>
 									<div class="fang_price">
 									<?php echo $v->price;?>元/平米•月<br />
@@ -47,10 +47,11 @@
 								</li>
 								<?php }?>
 							</ul>
+							<div class="pages_1"><?php echo $pagerData['linkhtml'];?></div>
 						</div>
-						<div class="re fn-hide">
+						<div class="re <?php if ($type==1) echo 'fn-hide';?>">
 							<ul>
-								<?php foreach($sale as $v){?>
+								<?php foreach($datalist as $v){?>
 								<li>
 									<div class="fang_price">
 									<?php echo number_format($v -> area * $v -> price /10000 , 2) ;?>万<br />
@@ -78,6 +79,7 @@
 								</li>
 								<?php }?>
 							</ul>
+							<div class="pages_1"><?php echo $pagerData['linkhtml'];?></div>
 						</div>
 					</div>
 				</div>

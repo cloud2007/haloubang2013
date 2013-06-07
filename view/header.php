@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title><?php echo $web_title;?></title>
+<link rel="shortcut icon" href="favicon.ico">
 <meta name="keywords" content="<?php echo $web_keywords;?>" />
 <meta name="description" content="<?php echo $web_description;?>" />
 <link rel="stylesheet" type="text/css" href="/public/css/base.css"/>
@@ -43,9 +44,9 @@
 			<div class="nav_l">
 				<ul>
 					<li><a <?php if($pageurl=='/') echo 'class="menu_ul_li_hover"';?> href="/">首　页</a></li>
-					<li><a <?php if(strpos($pageurl,'rent')>0) echo 'class="menu_ul_li_hover"';?> href="/rent">找出租 </a></li>
-					<li><a <?php if(strpos($pageurl,'sale')>0) echo 'class="menu_ul_li_hover"';?> href="/sale">找出售 </a></li>
-					<li><a <?php if(strpos($pageurl,'borough')>0) echo 'class="menu_ul_li_hover"';?> href="/borough">找楼盘 </a></li>
+					<li><a <?php if(strpos($pageurl,'rent')>0) echo 'class="menu_ul_li_hover"';?> href="/rent">租写字楼</a></li>
+					<li><a <?php if(strpos($pageurl,'sale')>0) echo 'class="menu_ul_li_hover"';?> href="/sale">买写字楼</a></li>
+					<li><a <?php if(strpos($pageurl,'newborough')>0) echo 'class="menu_ul_li_hover"';?> href="/newborough">新　盘</a></li>
 					<li><a <?php if(strpos($pageurl,'supply')>0) echo 'class="menu_ul_li_hover"';?> href="/supply">开发商直供 </a></li>
 					<li><a <?php if(strpos($pageurl,'borker')>0) echo 'class="menu_ul_li_hover"';?> href="/borker"> 经纪人 </a></li>
 					<li><a <?php if(strpos($pageurl,'map')>0) echo 'class="menu_ul_li_hover"';?> href="/map"> 地图找房 </a></li>

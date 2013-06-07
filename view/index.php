@@ -1,4 +1,5 @@
 <?php $news = new News()?>
+
 <div class="content">
 	<div id="search">
 		<form id="form1" name="form1" method="post" action="/search.php">
@@ -201,8 +202,47 @@
 		<div class="rent_b"></div>
 	</div>
 	<!------------------------------------------热门出售end------------------------------------------->
+	<!----------------新盘start----------------------->
+	<div class="building_new" style="margin-top:15px; margin-bottom:0px;">
+		<div class="building_new_l">
+			<div class="building_new_l_t"></div>
+			<div class="build_index" style="height:240px;">
+				<div class="line_for_bi"></div>
+				<div class="rent_bg_l supply">
+					<div class="rent_title">
+						<p class="rent_title_l ">热门新盘<span></span></p>
+						<p class="rent_title_r_0" style="float:right;"> <a href="/newborough">查看全部</a></p>
+					</div>
+					<div class="supply_pic_box">
+						<?php foreach($newborough as $k => $v){?>
+						<ul class="supply_newhos_box">
+							<li class="pic"><a href="/newborough/d-<?php echo $v->id;?>.html"><img src="<?php echo Util::getpicthumb($v -> getdefaultpic(),'small') ;?>" width="100" height="73"></a></li>
+							<li class="t1"><a href="/newborough/d-<?php echo $v->id;?>.html"><?php echo $v->b_name ;?></a></li>
+							<li class="t1 tips"><?php echo Util::csubstr(strip_tags(str_replace('&nbsp;','',$v->b_content)),0,30);?></li>
+							<li class="t1 price"><span><?php echo $v->b_saletprice1;?>元/平米</span> </li>
+						</ul>
+						<?php }?>
+					</div>
+				</div>
+			</div>
+			<div class="building_new_l_b"></div>
+		</div>
+		<div class="building_new_right_0">
+			<div class="building_new_right_t"></div>
+			<div class="building_new_right_bg" style="height:267px;">
+				<h4>新盘导购</h4>
+				<ul class="b_ul news_house_list">
+					<?php foreach($news ->getnews(124,9) as $v){?>
+					<li><a href="/news/d-<?php echo $v->id;?>.html">•&nbsp;<?php echo Util::csubstr($v->title,0,22);?></a></li>
+					<?php }?>
+				</ul>
+			</div>
+			<div class="building_new_right_b"></div>
+		</div>
+	</div>
+	<!--------------------新盘end-------------------->
 	<!-----------------------------------招聘信息----------------------------->
-	<div style="  height:96px; margin-top:19px;"><a href="/news/list.php?bid=79"><img src="img/zp.jpg" width="692" height="95" alt="" style="float:left;"></a> <a href="/"><img src="img/yzfy_0.jpg" width="295" height="95" alt="" style="float:right;"></a></div>
+	<div style="  height:96px; margin-top:15px;"><a href="/news/list.php?bid=79"><img src="img/zp.jpg" width="692" height="95" alt="" style="float:left;"></a> <a href="/"><img src="img/yzfy_0.jpg" width="295" height="95" alt="" style="float:right;"></a></div>
 	<!-------------------------------------招聘信息end-------------------------------->
 	<!------------------------------------------开发商直供------------------------------------------->
 	<!--- <div class="  rent rent_for_kf">

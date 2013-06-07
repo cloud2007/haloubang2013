@@ -20,9 +20,6 @@ select{ line-height:30px;}
 	<tr>
 		<td height="26" background="images/newlinebg3.gif" align="center">新闻管理</td>
 	</tr>
-	<tr>
-		<td height="26" bgcolor="#FFFFFF">　<a href="news.php"><font color="red">新闻列表</font></a> | <a href="news.php?action=add">添加楼盘</a> | <a href="news.php">草稿箱</a></td>
-	</tr>
 </table>
 <form name="order" method="post" onsubmit="return validator(this)" action="?action=save" class="form_box" >
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px; " class="borough">
@@ -42,6 +39,25 @@ select{ line-height:30px;}
 					<option value="<?php echo $key;?>" <?php if($datainfo->type == $key) echo "selected";?>><?php echo $value;?></option>
 					<?php }?>
 				</select>
+			</td>
+		</tr>
+		<tr>
+			<td width="13%" align="right" >所属新盘</td>
+			<td>
+				<select name="borough_id" id="borough_id">
+					<option value="">请选择所属新盘</option>
+					<?php
+					$borough = new Borough();
+					$res = $borough -> find(
+						array(
+							'whereAnd' => array( array('b_states','=1'),array('b_isnew','=1') ),
+						)
+					);
+					foreach($res as $v){
+					?>
+					<option value="<?php echo $v->id;?>" <?php if($datainfo->borough_id == $v->id) echo "selected";?>><?php echo $v->b_name;?></option>
+					<?php }?>
+				</select>(如果不是新盘资讯请忽略本条)
 			</td>
 		</tr>
 		<tr>

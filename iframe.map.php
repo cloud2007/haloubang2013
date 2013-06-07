@@ -61,7 +61,11 @@ var opts = {
 }
 map.centerAndZoom(point, 15);
 map.addOverlay(marker);
+<?php if($borough->b_isnew==0){?>
 var infoWindow = new BMap.InfoWindow("<span style='font-size:12px; color:#999; line-height:150%;'><?php echo $borough->b_addr;?></span><br><a href='/rent/?b_id=<?php echo $borough->id;?>' style='font-size:12px; color:#f90; line-height:150%;' target='_blank'>出租房源:<?php echo $borough->gethousenum(1);?>套</a><br><a href='/sale/?b_id=<?php echo $borough->id;?>' style='font-size:12px; color:#f90; line-height:150%;' target='_blank'>出售房源:<?php echo $borough->gethousenum(2);?>套</a>", opts);  // 创建信息窗口对象
+<?php }else{?>
+var infoWindow = new BMap.InfoWindow("<span style='font-size:12px; color:#999; line-height:150%;'><?php echo $borough->b_addr;?></span>", opts);  // 创建信息窗口对象
+<?php }?>
 marker.openInfoWindow(infoWindow);//提示信息
 marker.addEventListener("click", function(){          
    this.openInfoWindow(infoWindow);  

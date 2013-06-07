@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/js/FormValid.js"></script>
+﻿<script type="text/javascript" src="/js/FormValid.js"></script>
 <div class="content">
 	<div id="pic"> <a href="/map" target="_blank"> <img width="1003" height="102" style="float:left;" alt="" src="../img/banner_for_singe.jpg"> </a> </div>
 	<div id="percon_left">
@@ -6,13 +6,11 @@
 		<div class="perlist" style="background:#e7f3ff">
 			<ul class="list_ul" >
 				<li style="height:auto;">
-					<p style="font-size:14px; text-align:left; padding:15px; font-weight:normal;">·（1）、房地产经纪人注册申请表（一式两份）<br />
+					<p style="font-size:14px; text-align:left; padding:15px; font-weight:normal;">·（1）填写您的资料以及联系方式。<br />
 						<br />
-						·（2）、申请人的近期一寸免冠照片两张，其中申请初始注册的需提交三张照片；<br />
+						·（2）我们会在最短时间内联系您。<br />
 						<br />
-						·（3）、房地产经纪人执业资格证书以及复印件（含证书编号、姓名页）、身份证件（身份证、军官证或护照）复印件，并按要求贴在注册申请表指定的位置； <br />
-						<br />
-						·（4）、工作业绩证明材料；所在单位推荐意见及单位考核合格证明。</p>
+						</p>
 				</li>
 			</ul>
 		</div>

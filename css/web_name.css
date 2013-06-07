@@ -1,4 +1,4 @@
-/* CSS Document */
+﻿/* CSS Document */
 body{margin:0px;padding:0px;font-size:12px; font-family:Arial,  "宋体";background:#FFF;color:#666; width:100%; height:100%; }
 
 ul{padding:0px;margin:0px;}
@@ -18,6 +18,9 @@ a img,img{border:0px;}
 
 
 /**  头部广告 **/
+
+.ad_for_top_1 {BACKGROUND: url(../img/ad_top_1.jpg) no-repeat 0px 0px; width:1003px; height:82px; margin:0 0 10px 0;}
+.ad_top_jjr {BACKGROUND: url(../img/ad_top_jjr.jpg) no-repeat 0px 0px; width:739px; height:86px; margin:10px 0; border:#eee solid 1px;  }
 
 .gg_full {
 	POSITION: relative; MARGIN: 0px auto; WIDTH: 1003px;background:#e8e8e8
@@ -39,7 +42,7 @@ a img,img{border:0px;}
 
 .header { width:1003px;  margin:0 auto;font-family:Arial,  "宋体"; position:relative;}
 .content { width:1003px; margin:0 auto;font-family:Arial,  "宋体";}
-.footer { width:1003px; margin:0 auto;font-family:Arial,  "宋体";}
+.footer { width:1003px; margin:0 auto 50px auto;font-family:Arial,  "宋体";}
 
 .red{ color:#FF0000}
 #b_bg{ background:url(../img/bg_1_01.jpg) repeat-x; width:100%; }
@@ -284,6 +287,18 @@ background:url(../img/f.jpg) no-repeat 0 4px; color:#ed0000; float:right;}
 .supply  .supply_pic ul li p a.r{ color:#0b7cce; }
 .supply  .supply_pic ul li p a.r .e{ color:#ed0000;}
 .supply  .supply_pic ul li{ float:left; margin-right:24px; width:183px; margin-left:10px;}
+
+.supply .supply_pic_box{width:662px;  }
+.supply_newhos_box { width:321px; float:left; margin-top:20px; margin-left:10px; margin-bottom:10px;}
+.supply_newhos_box .pic { width:100px; margin-right:10px; margin-top:5px;}
+ .supply_newhos_box .t1 { width:190px; margin:0; }
+.supply .supply_pic_box .supply_newhos_box  li {float:left; }
+.supply .supply_pic_box .supply_newhos_box .t1 a { color:#00f; }
+.supply .supply_pic_box .supply_newhos_box .tips { height:36px; overflow:hidden; color:#999; margin:5px 0;  }
+
+.supply .supply_pic_box .supply_newhos_box .price { color:#F30;height:22px;line-height:22px;}
+.supply .supply_pic_box .supply_newhos_box .price span { margin:0; padding-left:22px; background: url("../img/s.jpg") 2px 3px no-repeat scroll  transparent;  height:22px; display:inline-block;}
+
  .supply  .supply_pic ul li p{ height:25px; text-align:center;}
 .supply  .supply_pic ul li p a.blue{ color:#0b7cce; font-size:14px; font-weight:bold;}
 .resources  { width:275px; float:right;   margin-right:5px;}
@@ -292,7 +307,8 @@ background:url(../img/f.jpg) no-repeat 0 4px; color:#ed0000; float:right;}
 .resources  ul li a{ padding-left:10px; background:url(../img/s_icon_04.jpg) no-repeat 0 8px; color:#2c5070;}
 .resources  ul li a:hover{ color:#F00; background:url(../img/s_icon_07.jpg) no-repeat 0 8px;}
 
-.build_index { padding:15px; height:220px; background:#f8f8f8; border:solid #cccccc; border-width:0 1px;}
+.build_index { padding:15px; height:220px; background:#f8f8f8; border:solid #cccccc; border-width:0 1px; position: relative;}
+.line_for_bi {position: absolute; border-left:#e0e0e0 solid 1px; width:1px; height:200px; top:60px; left:340px;}
 .build_index .rent_bg_l .rent_title{ height:26px; border-bottom:1px solid #dddddd;}
 .build_index .rent_bg_l .rent_title p{ line-height:22px;}
 .build_index .rent_bg_l .rent_title .rent_title_l{ float:left; padding-left:36px; 
@@ -393,15 +409,15 @@ background:url(../img/z_07.jpg) no-repeat 4px 5px; color:#0b5e8b; font-size:14px
 #position_title a { /*margin-left:15px;*/}
 #houses{ height:358px; margin-bottom:28px;}
 #houses .houses_l{ width:415px;   float:left; border:#eee solid 1px; padding:10px; height:335px; }
-#houses .houses_r{ width:526px; height:332px; border:1px solid #c2c8ff; float:right; background:#f4f4ff; padding:10px; position:relative; }
-#houses .houses_r  .house_title{ position:absolute; top:10px; left:29px; font-size:14px; font-weight:bold; color:#000;}
+#houses .houses_r{ width:526px; height:332px; border:1px solid #c2c8ff; float:right; background:#f4f4ff; padding:10px; position:relative; z-index:10; }
+#houses .houses_r  .house_title{ position:absolute; top:10px; left:15px; font-size:14px; font-weight:bold; color:#000;}
 #houses .houses_r .score{ position:absolute; top:19px; right:114px; color:#010101; }
 #houses .houses_r .score_a{ width:73px; height:38px; position:absolute; top:5px; right:21px; line-height:40px; padding-left:11px;
  font-size:30px; color:#064dfa; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
-#houses .houses_r .houses_des{ position:absolute; top:40px; width:525px;}
-#houses .houses_r .houses_des li{ height:33px; line-height:33px; padding:0 10px; border-bottom:1px dashed #cecece;}
+#houses .houses_r .houses_des{ position:absolute; top:40px; width:400px;}
+#houses .houses_r .houses_des li{ height:33px; line-height:33px; padding:0 5px; border-bottom:1px dashed #cecece;}
 #houses .houses_r .houses_des li span{ color:#414141;}
-#houses .houses_r .houses_des li .f{ width:295px; display:inline-block;}
+#houses .houses_r .houses_des li .f{ width:210px; display:inline-block;}
 #houses .houses_r .houses_des li  .f1{ color:#1c1b1b; font-size:14px; font-weight:bold;}
 #houses .houses_r .houses_des li .t{ color:#0036fd;font-weight:bold;}
 #houses .houses_r .houses_des li .t a{ color:#0036fd;font-weight:bold; }
@@ -409,10 +425,13 @@ background:url(../img/z_07.jpg) no-repeat 4px 5px; color:#0b5e8b; font-size:14px
 #houses .houses_r .houses_des li .r{ color:#ff0000; font-weight:bold; font-size:18px;}
 #houses .houses_r .houses_des .houses_r_li {height:24px; line-height:24px; padding:0 10px; font-size:12px; border-bottom:1px dashed #cecece;}
 
-#houses .houses_r .houses_des_0{ position:absolute; top:280px; width:525px;}
-#houses .houses_r .houses_des_0 li{ height:33px; line-height:33px; padding:0 21px; border-bottom:1px dashed #cecece;}
+
+.jjtzw{width:200px; text-align:right; display:inline-block;}
+
+#houses .houses_r .houses_des_0{ position:absolute; top:275px; width:400px;}
+#houses .houses_r .houses_des_0 li{ height:33px; line-height:33px; padding:0 5px; border-bottom:1px dashed #cecece;}
 #houses .houses_r .houses_des_0 li span{ color:#414141;}
-#houses .houses_r .houses_des_0 li .f{ width:296px; display:inline-block;}
+#houses .houses_r .houses_des_0 li .f{ width:210px; display:inline-block;}
 #houses .houses_r .houses_des_0 li  .f1{ color:#1c1b1b; font-size:14px; font-weight:bold;}
 #houses .houses_r .houses_des_0 li .t{ color:#0036fd;font-weight:bold;}
 #houses .houses_r .houses_des_0 li .t a{ color:#0036fd;font-weight:bold; }
@@ -421,6 +440,7 @@ background:url(../img/z_07.jpg) no-repeat 4px 5px; color:#0b5e8b; font-size:14px
 #houses .houses_r .houses_des_0 .houses_r_li {height:24px; line-height:24px; padding:0 10px; font-size:12px; border-bottom:1px dashed #cecece;}
 
 #houses .houses_r .houses_des_1{ position:absolute; top:55px; width:525px;}
+#houses .houses_r .h_d_2 {position:absolute; top:25px; width:525px;}
 #houses .houses_r .houses_des_1 li{ height:33px; line-height:33px; padding:0 21px; border-bottom:1px dashed #cecece;}
 #houses .houses_r .houses_des_1 li span{ color:#414141;}
 #houses .houses_r .houses_des_1 li .f{ width:296px; display:inline-block;}
@@ -430,6 +450,7 @@ background:url(../img/z_07.jpg) no-repeat 4px 5px; color:#0b5e8b; font-size:14px
 #houses .houses_r .houses_des_1 li .t a:hover{text-decoration:underline;}
 #houses .houses_r .houses_des_1 li .r{ color:#ff0000; font-weight:bold; font-size:18px;}
 #houses .houses_r .houses_des_1 .houses_r_li {height:24px; line-height:24px; padding:0 10px; font-size:12px; border-bottom:1px dashed #cecece;}
+#houses .houses_r .houses_des_1 .h_r_l_0 { margin-bottom:25px; border:none;}
 
 #houses .houses_r .p_t{ position:absolute; bottom:5px; left:20px;}
 #houses .houses_r .p_t .ep{ color:#2d2d2d; margin-right:5px;}
@@ -465,6 +486,27 @@ color:#484848; padding-left:18px; background:url(../img/se_03.jpg) no-repeat 0 8
 #house_information .house_infor_l .house_infor_l_a .h_bg .h_ul li.hover_li span{ color:#fff; background:#0754fa;}
 #house_information .house_infor_l .house_infor_l_a .h_bg .h_ul li.hover_li a{ color:#fff;background:#0754fa;}
 #house_information .house_infor_l .house_infor_l_a .h_b{ width:738px; height:3px; background:url(../img/h_info_06.jpg) no-repeat;}
+
+#house_information .tags .title { background:none; font-weight:bold; color:#000; padding:0; margin:0;}
+#house_information .tags span { background:url(../img/tags.gif) no-repeat left scroll; display:inline-block;  padding-left:30px; font-size:12px; height:25px; line-height:25px; margin-right:10px; }
+
+#house_information .tags span a { background:url(../img/tags.gif) no-repeat right scroll; display:block; padding-right:10px; color:#00f;}
+#house_information .tags span a:hover { color:#000; text-decoration:underline;}
+
+#house_information .news_newb { margin-top:15px;}
+#house_information .news_newb h1  { font-size:14px; background:url("../img/info.jpg") repeat-x scroll 0 0 transparent; height:28px; padding-left:10px; line-height:28px; margin-bottom:10px; padding-bottom:5px; color:#000;}
+
+#house_information .news_newb ul {  padding-left:30px; margin-bottom:15px;}
+#house_information .news_newb ul .title {  font-weight:bold;  height:28px; line-height:28px;}
+#house_information .news_newb ul .title span { text-align:right; color:#333; display:inline-block; font-weight:100; float:right;}
+#house_information .news_newb ul .title a {color:#00f; float:left;}
+#house_information .news_newb ul .title a:hover {color:#f00;}
+#house_information .news_newb ul .content {width:550px; margin:0; clear:both; color:#000;}
+
+#house_information .newb_info h1 { font-size:14px; background:url("../img/info.jpg") repeat-x scroll 0 0 transparent; height:28px; padding-left:10px; line-height:28px; margin-bottom:10px; padding-bottom:5px; color:#000;}
+
+#house_information .newb_info .content { width:550px; padding-left:30px; line-height:2; margin:0;}
+
 #parameter{ margin-top:25px; }
 #parameter table tr{ height:37px; border-color:#ccc; font-size:12px;}
 #parameter table tr.bg_gray_fortable { background:#F9F9F9}
@@ -515,6 +557,31 @@ background:url(../img/1.png) repeat-x 0 0; display:inline-block;  height:15px; m
 #pic_s ul li .inf .inf_dz_span { color:#f00; margin-right:5px; font-weight:bold;}
 /*-----------------------------找楼盘end--------------------------------*/
 
+/*-----------------------------热门新盘end--------------------------------*/
+
+
+#pic_s_0 ul li .inf .inf_dz_span { color:#f00; margin-right:5px; font-weight:bold;}
+#pic_s_0{ overflow:hidden;}
+#pic_s_0 ul li{ width:282px; height:285px; background:#f6f6f6; border:1px solid #e5e5e5; 
+padding:20px; position:relative; float:left; margin-right:15px; margin-bottom:20px;}
+#pic_s_0 ul li.one2{ margin-right:0; float:right;}
+#pic_s_0 ul li .icon{ width:37px; height:23px; display:block; background:url(../img/bg_1.png) no-repeat;
+position:absolute; left:158px; top:6px; color:#FFF; text-align:center; font-size:18px; line-height:23px;}
+#pic_s_0 ul li .ti{ font-size:16px; font-weight:bold; color:#323232; height:27px; line-height:27px;}
+#pic_s_0 ul li .ti a { color:#001eff;}
+#pic_s_0 ul li .ti a:hover { color:#f00;}
+#pic_s_0 ul li .dz{ color:#757575; height:24px; font-size:12px;}
+#pic_s_0 ul li .dz span{ color:#373737; text-decoration:underline;}
+#pic_s_0 ul li .inf{color:#757575;}
+#pic_s_0 ul li .inf span{color:#373737;}
+#pic_s_0 ul li .price {  font-size:14px; }
+#pic_s_0 ul li .price  span { color:#f30;font-weight:bold;}
+
+.new_houses_title { height:80px;     width:1003px; margin:0 auto 10px auto;}
+.new_houses_title h1 { font-size:25px; font-weight:bold; color:#000;}
+
+/*-----------------------------热门新盘end--------------------------------*/
+
 
 /*-----------------------------热租楼盘和热售楼盘--------------------------------*/
 .hot_rent .md_ul{ margin-top:0px;  height:23px;}
@@ -530,7 +597,7 @@ background:url(../img/1.png) repeat-x 0 0; display:inline-block;  height:15px; m
 .hot_rent .rent_bg_r ul li span{ display:block; width:16px; height:16px; background:#c0c0c0; color:#FFF;
 line-height:16px; text-align:center; float:left; margin-right:9px;}
 .hot_rent  .rent_bg_r ul li span.yellow{ background:#ffbc03;}
-.hot_rent  .rent_bg_r ul li dl dt{ color:#495e76;  height:15px; padding:0 16px; height:28px; overflow:hidden;  }
+.hot_rent  .rent_bg_r ul li dl dt{ color:#495e76;  height:15px; padding:0 10px; height:28px; overflow:hidden;  }
 .hot_rent  .rent_bg_r ul li dl dt a{ display:block; float:left; color:#0c0c0c;}
 .hot_rent  .rent_bg_r ul{ margin-top:16px;}
 .hot_rent  .rent_bg_r ul li dl dt span{ float:right; background:none; color:#00f; width:90px; display:inline-block; text-align:right; }
@@ -918,26 +985,30 @@ width:119px; height:37px; cursor:pointer; text-indent:-9999px; border:none; disp
 .h_information .houses_des li{ height:32px;}
 .h_information .houses_des li .f1{ font-size:14px;}
 .h_information .houses_des li .f3{ font-size:12px; color:#8f8f8f;}
-.h_information .houses_des li{ font-size:14px;}
-#houses .h_information .img_1{ position:absolute; top:150px; left:10px; }
+.h_information .houses_des li{ font-size:12px;}
+#houses .h_information .img_1{ position:absolute; top:150px; left:40px; }
 #houses .h_information_bo .img_1{ position:absolute; top:240px; left:10px; }
-#houses .h_information .img_2{ position:absolute; top:160px; left:343px; padding:2px; border:#ddd solid 1px; background:#fff;}
-#houses .h_information .img_3{ position:absolute; top:190px; left:472px;}
-#houses .h_information .img_4{ position:absolute; top:190px; left:438px;}
-.h_information .hp{ position:absolute; top:160px; left:435px;}
-.h_information .hp1{ position:absolute; top:200px; left:57px;}
+#houses .h_information .img_2{ position:absolute; top:15px; left:435px; padding:2px; border:#ddd solid 1px; background:#fff;}
+#houses .h_information .img_3{ position:absolute; top:155px; left:472px;}
+#houses .h_information .img_4{ position:absolute; top:155px; left:438px;}
+.h_information .hp{ position:absolute; top:130px; left:435px;}
+.h_information .hp1{ position:absolute; top:210px; left:90px;}
+.h_information .hp2 {position:absolute; top:190px; left:438px;}
+.h_information .hp2 a { border:#CCC solid 1px; background:#fff; padding:2px 4px; display:inline-block}
+.h_information .hp2 a:hover { border:#CCC solid 1px; background:#eee; padding:2px 4px; color:#000;display:inline-block}
+
 .h_information_bo .hp1{ position:absolute; top:250px; right:10px; width:185px;}
-#bdshare { position:absolute; top:230px; left:57px;}
-#bdshare_0 { position:absolute; top:290px; left:60px;}
+.bdshare { position:absolute; top:235px; left:90px;}
+.bdshare_0 { position:absolute; top:290px; left:60px;}
 .h_information .hp1 span{ color:#0036fd; text-decoration:underline;}
 .h_information_bo .hp1 span{ color:#0036fd; text-decoration:underline;}
 #h_Availability{ width:706px;  height:auto; padding:15px; background:#f4f4ff; border:1px solid #dbeaf2; border-radius:5px; line-height:2;}
 #h_Availability  .h_title{ font-size:14px; font-weight:bold; font-weight:bold; margin-bottom:15px; color:#000; }
 
 #h_Availability  .h_title_2 span{ color:#0046dd;}
-.r_s .mark_bg .s{ margin:0 15px 0 30px; padding:0 0 10px 0;  width:210px; overflow:hidden; height:398px; background:url("../img/bg_free_youhui.gif") no-repeat;}
-.r_s .mark .h{ overflow:hidden; height:418px;}
-.r_s  .h1{ height:428px;}
+.r_s .mark_bg .s{ margin:0 15px 0 30px; padding:0 0 10px 0;  width:210px; overflow:hidden; height:456px; background:url("../img/bg_free_youhui.gif") no-repeat;}
+.r_s .mark .h{ overflow:hidden; height:495px;}
+.r_s  .h1{ height:500px;}
 .r_s  .h2{ height:200px;}
 .r_s  .h2 .h3{ height:190px;}
 .r_s  .h2 .h3 ul li{ padding-left:10px; height:37px; line-height:37px; overflow:hidden;}
@@ -1013,12 +1084,12 @@ width:119px; height:37px; cursor:pointer; text-indent:-9999px; border:none; disp
 padding-left:15px; padding-right:15px; padding-bottom:25px;}
 #search_list .hight_search_r  .list_cent ul li{ height:124px; padding-bottom:17px; border-bottom:1px dashed #e4ebfe; padding-top:10px;}
 #search_list .hight_search_r  .list_cent ul li .hover_div{ background:#f1f1f1; border:1px solid #f1f1f1; cursor:pointer;}
-#search_list .hight_search_r  .list_cent ul li .fang{ height:116px;  position:relative; border:1px solid #FEFEFF;}
+#search_list .hight_search_r  .list_cent ul li .fang{ height:130px;  position:relative; border:1px solid #FEFEFF;}
 #search_list .hight_search_r  .list_cent ul li .fang img{}
 #search_list .hight_search_r  .list_cent ul li .fang .tip_for_house { position:absolute; z-index:6;top:10px; left:5px; }
 #search_list .hight_search_r  .list_cent ul li .fang .pro_img{ position:absolute; top:22px; z-index:5; left:22px; }
 
-#search_list .hight_search_r  .list_cent ul li .fang .fang_price { position:absolute; top:45px; z-index:5; right:150px; font-size:14px; font-weight:bold; color:#F00; text-decoration:none;}
+#search_list .hight_search_r  .list_cent ul li .fang .fang_price { position:absolute; top:45px; padding:2px; z-index:5; right:150px; font-size:14px; font-weight:bold; color:#F00; text-decoration:none;}
 #search_list .hight_search_r  .list_cent ul li .hover_div .fangli a.red{ color:#1038a5;}
 #search_list .hight_search_r  .list_cent ul li .fangli a.red:visited{ color:#402165;}
 #search_list .hight_search_r  .list_cent ul li .fang  .fangli{position:absolute;top:20px; left:176px; }
@@ -1168,7 +1239,9 @@ padding-left:12px; color:#0036fe; font-size:14px;}
  .building_new_right_bg .building_ul li.ar{ width:140px; text-align:center;}
  .building_new_right_bg .building_ul li.mj{ width:80px;}
 .building_new_right_bg .building_ul li.price{ width:60px;}
- .building_new_right_bg .b_ul{ margin-top:10px;}
+ .building_new_right_bg .b_ul{ margin-top:10px;  }
+ .building_new_right_bg .news_house_list { padding:10px;}
+  .building_new_right_bg .news_house_list li a{ display:block; }
  .building_new_right_bg .b_ul li{ height:22px;}
 .building_new_right_bg .b_ul li a.h{ display:inline-block; width:85px; 
 padding-left:42px; background:url(../img/news_02.jpg) no-repeat 2px 2px; color:#2b2b2b;height:22px; line-height:22px; float:left; overflow:hidden}
@@ -1389,6 +1462,10 @@ font-size: 12px; display: block; color:#FFF; text-decoration:none; }
 .op li { background: #999999; filter: alpha(opacity=60); opacity: 0.6; }
 .op li.cur { background: #666666; }
 .slide-txt span { display: none; }
+
+
+/*新盘切换补充样式*/
+
 
 
 /******详细页 图片切换 end *********/

@@ -20,9 +20,6 @@ select{ line-height:30px;}
 	<tr>
 		<td height="26" background="images/newlinebg3.gif" align="center">楼盘字典管理</td>
 	</tr>
-	<tr>
-		<td height="26" bgcolor="#FFFFFF">　<a href="borough.php">楼盘列表</a> | <a href="borough.php?action=add"><font color="red">添加楼盘</font></a></td>
-	</tr>
 </table>
 <form name="order" method="post" onsubmit="return validator(this)" action="?action=save" class="form_box" >
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px; " class="borough">
@@ -85,6 +82,16 @@ select{ line-height:30px;}
 			<td width="10%" align="right">楼盘介绍</td>
 			<td colspan="3" style="padding:5px;"><textarea name="b_content" rows="3" id="b_content" style="width:99%; overflow:hidden"><?php echo $datainfo->b_content;?></textarea></td>
 		</tr>
+		<?php if($_GET['isnew']==1){?>
+		<tr>
+			<td width="10%" align="right">楼盘标签</td>
+			<td colspan="3"><?php foreach(Config::item("newborough.tags") as $key => $value){?>
+				<input name="b_support[]" type="checkbox" id="b_support[]" value="<?php echo $key;?>" <?php if($datainfo->checkSupport($key) !== false)echo "checked";?> />
+				<?php echo $value;?>
+				<?php }?>
+			</td>
+		</tr>
+		<?php }else{?>
 		<tr>
 			<td width="10%" align="right">楼盘配套</td>
 			<td colspan="3"><?php foreach(Config::item("borough_support") as $key => $value){?>
@@ -93,6 +100,7 @@ select{ line-height:30px;}
 				<?php }?>
 			</td>
 		</tr>
+		<?php }?>
 	</table>
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px" class="borough">
 		<tr bgcolor="#E7E7E7" >
@@ -105,6 +113,7 @@ select{ line-height:30px;}
 			<td width="49%"><input name="wy[wuyefei]" type="text" id="wy[wuyefei]" size="10" value="<?php echo $datainfo -> get('wuyefei');?>" valid="isNumber" errmsg="物业费只能是数字!" />
 				元/m<sup>2</sup></td>
 		</tr>
+		<?php if($_GET['isnew']!=1){?>
 		<tr>
 			<td width="10%" align="right">物业支付方式</td>
 			<td width="29%"><input name="wy[zhifufangsi]" type="text" id="wy[zhifufangsi]" value="<?php echo $datainfo -> get('zhifufangsi');?>" /></td>
@@ -137,6 +146,7 @@ select{ line-height:30px;}
 				<input name="wy[tingchefei3]" type="text" id="wy[tingchefei3]" value="<?php echo $datainfo -> get('tingchefei3');?>" />
 				元/月</td>
 		</tr>
+		<?php }?>
 	</table>
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px" class="borough">
 		<tr bgcolor="#E7E7E7" >
@@ -228,6 +238,7 @@ select{ line-height:30px;}
 			<td width="49%"><input name="jz[kaifashang]" type="text" id="jz[kaifashang]" value="<?php echo $datainfo -> get('kaifashang');?>" /></td>
 		</tr>
 	</table>
+	<?php if($_GET['isnew']!=1){?>
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px" class="borough">
 		<tr bgcolor="#E7E7E7" >
 			<td height="28" colspan="4" background="images/tbg.gif" style="padding-left:10px;"> ◆ <strong>设备</strong> </td>
@@ -235,11 +246,11 @@ select{ line-height:30px;}
 		<tr>
 			<td width="10%" align="right">电梯</td>
 			<td width="29%">客梯
-				<input name="sb[keti]" type="text" id="sb[keti]" size="3" value="<?php echo $datainfo -> get('keti');?>" />
+				<input name="sb[keti]" type="text" id="sb[keti]" size="2" value="<?php echo $datainfo -> get('keti');?>" />
 				部 货梯
-				<input name="sb[huoti]" type="text" id="sb[huoti]" size="3" value="<?php echo $datainfo -> get('huoti');?>" />
+				<input name="sb[huoti]" type="text" id="sb[huoti]" size="2" value="<?php echo $datainfo -> get('huoti');?>" />
 				部 转乘梯
-				<input name="sb[zhuancengti]" type="text" id="sb[zhuancengti]" size="3" value="<?php echo $datainfo -> get('zhuancengti');?>" />
+				<input name="sb[zhuancengti]" type="text" id="sb[zhuancengti]" size="2" value="<?php echo $datainfo -> get('zhuancengti');?>" />
 				部</td>
 			<td width="12%" align="right">电梯品牌</td>
 			<td width="49%"><input name="sb[diantipinpai]" type="text" id="sb[diantipinpai]" value="<?php echo $datainfo -> get('diantipinpai');?>" /></td>
@@ -319,6 +330,7 @@ select{ line-height:30px;}
 			</td>
 		</tr>
 	</table>
+	<?php }?>
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px" class="borough">
 		<tr bgcolor="#E7E7E7" >
 			<td height="28" background="images/tbg.gif" style="padding-left:10px;"> ◆ <strong>楼盘图片</strong> </td>
@@ -403,12 +415,14 @@ select{ line-height:30px;}
 				<input type="radio" name="qt[shewai1]" value="0" <?php if($datainfo -> get('shewai1')==0)echo "checked";?> />
 				不可以</td>
 		</tr>
+		<?php if($_GET['isnew']!=1){?>
 		<tr>
 			<td width="10%" align="right">装修保证金</td>
 			<td width="29%"><input name="qt[baozhengjin]" type="text" id="qt[baozhengjin]" value="<?php echo $datainfo -> get('baozhengjin');?>" /></td>
 			<td width="12%" align="right">装修审图费</td>
 			<td width="49%"><input name="qt[shentufei]" type="text" id="qt[shentufei]" value="<?php echo $datainfo -> get('shentufei');?>" /></td>
 		</tr>
+		<?php }?>
 		<tr>
 			<td width="10%" align="right">楼盘发布选项</td>
 			<td width="29%"><input name="b_states" type="radio" value="1" checked="checked" <?php if($datainfo -> b_states !==0)echo "checked";?> />
@@ -416,7 +430,7 @@ select{ line-height:30px;}
 				<input type="radio" name="b_states" value="0" <?php if($datainfo -> b_states == 0)echo "checked";?> />
 				保存为草稿</td>
 			<td width="12%" align="right"></td>
-			<td width="49%"><input name="b_creattime" type="hidden" id="b_creattime" value="<?php echo $datainfo->b_creattime;?>" /></td>
+			<td width="49%"><input name="b_creattime" type="hidden" id="b_creattime" value="<?php echo $datainfo->b_creattime;?>" /><input name="b_isnew" type="hidden" id="b_isnew" value="<?php if($datainfo -> b_isnew){echo $datainfo -> b_isnew ;} else {echo $isnew;}?>" /></td>
 		</tr>
 	</table>
 	<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px" class="borough">

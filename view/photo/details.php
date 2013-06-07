@@ -10,7 +10,7 @@
 	<div id="position_title">我的位置:找出租 > 新希望国际 > 楼盘相册</div>
 	<!-------------------------------------------具体的楼盘相册------------------------------------------------------>
 	<div id="intro_con"> <img src="<?php echo Util::getpicthumb($borough->getdefaultpic(),'small');?>" width="86" height="80" alt="">
-		<p class="m"><?php echo $borough->b_name;?> <a href="/borough/d-<?php echo $v->id;?>.html" class="f4"> 楼盘详情</a> <a href="/photo" class="f4">返回楼盘相册列表</a></p>
+		<p class="m"><?php echo $borough->b_name;?> <a href="/borough/d-<?php echo $borough->id;?>.html" class="f4"> 楼盘详情</a> <a href="/photo" class="f4">返回楼盘相册列表</a></p>
 		<div class="m_5"><?php echo $borough->b_content;?></div>
 	</div>
 	<div class="intro_list">

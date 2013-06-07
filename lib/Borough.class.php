@@ -34,6 +34,7 @@ class Borough extends Data {
 			'b_creattime' => 'b_creattime',
 			'b_edittime' => 'b_edittime',
 			'b_states' => 'b_states',
+                        'b_isnew' => 'b_isnew',
                         'b_complete' => 'b_complete',
 			'attributeData' => 'b_data',
 			),
@@ -104,6 +105,12 @@ class Borough extends Data {
                     )
             );
         }
+
+        public function b_complete_show(){
+            if($this -> b_isnew ==1 ) return '-';
+            return $this -> b_complete;
+        }
+
 
         public  function complete(){
             $arr = $_POST;

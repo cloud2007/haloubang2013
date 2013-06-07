@@ -2,6 +2,7 @@
 //楼盘字典参数
 require_once('config.admin.php');
 CheckGrant('borough');
+$isnew = $_GET['isnew'] ? $_GET['isnew'] : 0;
 //保存 编辑
 if($_GET['action']=='save'){
         $check = new Borough();
@@ -17,7 +18,7 @@ if($_GET['action']=='save'){
             }
         }
 
-        if($check ->complete()<60){
+        if($check ->complete()<60 && $_POST['b_isnew']==0){
             ShowMsg('楼盘参数填写太少！无法保存','-1',0,1000);exit();
         }
         //die;
@@ -34,7 +35,7 @@ if($_GET['action']=='save'){
 		'b_used' => 'b_used',
 		'b_avatar' => 'b_avatar',
 		'b_company' => 'b_company',
-		//'b_content' => 'b_content',
+		'b_isnew' => 'b_isnew',
 		'b_rentprice1' => 'b_rentprice1',
 		'b_rentprice2' => 'b_rentprice2',
 		'b_saletprice1' => 'b_saletprice1',
@@ -66,15 +67,17 @@ if($_GET['action']=='save'){
 	foreach($_POST['jz'] as $key => $value){
 		$Borough -> set ("{$key}","{$value}");
 	}
-	foreach($_POST['sb'] as $key => $value){
-		$Borough -> set ("{$key}","{$value}");
-	}
-	foreach($_POST['qt'] as $key => $value){
-		$Borough -> set ("{$key}","{$value}");
-	}
-        foreach($_POST['zb'] as $key => $value){
-		$Borough -> set ("{$key}","{$value}");
-	}
+        if(is_array($_POST['sb'])){
+            foreach($_POST['sb'] as $key => $value){
+                    $Borough -> set ("{$key}","{$value}");
+            }
+            foreach($_POST['zb'] as $key => $value){
+                    $Borough -> set ("{$key}","{$value}");
+            }
+        }
+        foreach($_POST['qt'] as $key => $value){
+            $Borough -> set ("{$key}","{$value}");
+        }
 	try{
 		$borough_id = $Borough -> save() ->id;
                 $borough_pic = new Borough_pic();
@@ -93,7 +96,7 @@ if($_GET['action']=='save'){
                 }
                 $borough_pic ->deletes('is_use = 0 and borough_id='.$borough_id);
                 }
-		ShowMsg('楼盘保存完毕','borough.php',0,1000);exit();
+		ShowMsg('楼盘保存完毕','borough.php?isnew='.$_POST['b_isnew'],0,1000);exit();
 	}catch(Exception $e){
 		echo $e->getMessage();
 		exit();
@@ -105,7 +108,7 @@ if($_GET['action']=='del'){
 	$Borough_pic = new Borough_pic();
 	$Borough ->delete($_GET['id']);
         $Borough_pic ->deletes('borough_id='.$_GET['id']);
-        ShowMsg('楼盘删除完毕','borough.php',0,1000);exit();
+        ShowMsg('楼盘删除完毕','borough.php?isnew='.$_GET['isnew'],0,1000);exit();
 }
 //保存 编辑
 
@@ -150,11 +153,12 @@ if($_GET['action']=='add'){
 
         $options=array();
         $whereAnd=array();
+        if(isset($_GET['isnew'])) $whereAnd[]=array('b_isnew','='.$_GET['isnew']);
         if($_POST['btime']) $whereAnd[]=array('b_creattime','>'.strtotime($_POST['btime']));
         if($_POST['etime']) $whereAnd[]=array('b_creattime','<'.strtotime($_POST['etime']));
         if($_POST['bname']) $whereAnd[]=array('b_addname',"='".$_POST['bname']."'");
         if($_POST['cityarea']) $whereAnd[]=array('b_area1','='.$_POST['cityarea']);
-        if($_POST['q']!=='请输入楼盘名称,楼盘地址'&&$_POST['q']!=="") $whereAnd[]=array('b_name',"like '%".$_POST['q']."%' or b_addr like '%".$_POST['q']."%'");
+        if($_POST['q']!=='请输入楼盘名称' && $_POST['q']) $whereAnd[]=array('b_name',"like '%".$_POST['q']."%'");
         $options['limit']="{$PageNum},{$pagesize}";
         $options['whereAnd']=$whereAnd;
 	$datalist = $Borough -> find($options);
@@ -165,6 +169,6 @@ if($_GET['action']=='add'){
 }
 
 $view -> set('user',$user);
-
+$view -> set('isnew',$isnew);
 $view->renderHtml($view->render());
 ?>
